@@ -24,7 +24,7 @@ public class PromTicket {
 		int timer = 1;
 		while ( timer == 1) {
 		
-		System.out.println("Enter  your grade");
+		System.out.println("Enter your grade");
 		System.out.println("Freshman - 9");
 		System.out.println("Sophomore - 10");
 		System.out.println("Junior - 11");
