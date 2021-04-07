@@ -1,0 +1,88 @@
+package TextFiles;
+import java.lang.Math;
+public class arrayMethods {
+	
+	public static void printArray(int[] arr) {
+		for ( int i = 0; i < arr.length; i++) {
+			System.out.print(arr[i] + " | ");
+		}
+		System.out.println();
+	}
+	
+	public static void swap(int[] arr, int pos1, int pos2) {
+		int temp = arr[pos1];
+		arr[pos1] = arr[pos2];
+		arr[pos2] = temp;
+	}
+
+	public static int search(int[] arr, int target) { 
+		int count = 0;
+		int index = 0;
+		for(int i = 0; i < arr.length; i++) {
+			if (arr[i] == target) {
+				return i;
+			
+		}
+		}
+		return -1;
+	}
+	
+	public static double Mean(int[] arr) {
+		double mean = -1;
+		double total = 0;
+		for(int i = 0; i < arr.length; i++) {
+			total += arr[i];
+		}
+		mean = total / arr.length;
+		return mean;
+	}
+	
+	public static void indices(int[] arr, int target) {
+		for(int i = 0; i < arr.length; i++) {
+			if (arr[i] == target) {
+				System.out.print(i + ", ");
+			}
+		}
+	}
+	public static int max(int[] arr) {
+		int comp1 = arr[0];
+		int comp2;
+		
+		for (int i = 0; i < arr.length; i++) {
+			comp2 = arr[i];
+			if (comp2 > comp1) {
+				comp1 = comp2;
+			}
+		}
+		return comp1;
+	}
+	
+	public static int min(int[] arr) {
+		int comp1 = arr[0];
+		int comp2;
+		
+		for (int i = 0; i < arr.length; i++) {
+			comp2 = arr[i];
+			if (comp2 < comp1) {
+				comp1 = comp2;
+			}
+		}
+		return comp1;
+	}
+	
+	public static void main(String[] args) {
+		int[] numbers = new int[25];
+		
+		for (int i = 0; i < numbers.length; i++) {
+			numbers[i] = (int) (Math.random() * 100) + 1;
+			
+		}
+		System.out.println();
+		printArray(numbers);
+		System.out.println();
+		printArray(numbers);
+
+
+	}
+	
+}
